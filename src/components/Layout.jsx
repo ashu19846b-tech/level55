@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/lib/AuthContext";
+import TestnetBanner from "./TestnetBanner";
 
 // Premium SVG Logo — flame + chain link
 export const GasChainMark = ({ size = 32 }) => (
@@ -193,6 +194,7 @@ export default function Layout() {
 
       {/* ─────────── MAIN CONTENT ─────────── */}
       <main className="flex-1 min-w-0 min-h-screen relative flex flex-col">
+        <TestnetBanner />
 
         {/* Mobile Header */}
         <div className="lg:hidden sticky top-0 z-40 px-4 py-3 flex items-center justify-between border-b border-border/50"
