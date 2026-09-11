@@ -11,6 +11,7 @@ import { Loader2, Shield, MapPin, BadgeCheck, Zap, User, Activity
 } from "lucide-react";
 import { generateHash, generateBlockHash, generateBookingId } from "@/lib/blockchain";
 import { checkConnection, sendXLM, retrievePublicKey } from "@/lib/freighter";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -103,11 +104,19 @@ export default function BookCylinder() {
   async function handleSubmit(e) {
     e.preventDefault();
     if (step < 3) {
+      trackEvent(ANALYTICS_EVENTS.FEATURE_USED, { feature: "booking_step_progress", nextStep: step + 1 });
       setStep(step + 1);
       return;
     }
 
     setLoading(true);
+    trackEvent(ANALYTICS_EVENTS.BOOKING_INITIATED, {
+      cylinderType: form.cylinder_type,
+      quantity: form.quantity,
+      paymentMethod: form.payment_method,
+      amount: finalAmount,
+    });
+
     try {
       const bookingId = generateBookingId();
       const fullAddress = `${form.street_address}, ${form.city}, ${form.state} - ${form.pincode}, India`;
@@ -117,7 +126,9 @@ export default function BookCylinder() {
           const allowed = await checkConnection();
           if (allowed) {
               const userAddress = await retrievePublicKey();
-              await sendXLM(userAddress, hashEstimate);
+              trackEvent(ANALYTICS_EVENTS.TX_SIGN_PROMPT, { recipient: userAddress, amount: hashEstimate });
+              const txRes = await sendXLM(userAddress, hashEstimate);
+              trackEvent(ANALYTICS_EVENTS.TX_SUCCESS, { txHash: txRes?.hash || 'confirmed', amount: hashEstimate });
           }
       }
 
@@ -146,9 +157,11 @@ export default function BookCylinder() {
         nonce: Math.floor(Math.random() * 100000),
       });
 
+      trackEvent(ANALYTICS_EVENTS.FEATURE_USED, { feature: "booking_created", bookingId });
       toast({ title: "Booking Finalized", description: "Ledger commit successful." });
       navigate("/bookings");
     } catch (err) {
+      trackEvent(ANALYTICS_EVENTS.TX_FAILED, { error: err.message });
       toast({ title: "Commit Failed", description: err.message, variant: "destructive" });
     } finally {
       setLoading(false);
