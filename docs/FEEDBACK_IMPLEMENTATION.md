@@ -1,0 +1,109 @@
+# 🔁 FEEDBACK → IMPROVEMENT MAPPING — GasChain Level 5
+
+> **Purpose**: This document provides the required mapping between real user feedback and the product improvements that were implemented in response. Each row must contain a real User ID, real feedback, a real improvement, and the actual Git commit ID and link.
+
+> [!IMPORTANT]
+> This was a specific rejection reason in the previous submission. Every improvement listed here MUST be:
+> - Linked to a real user who provided feedback
+> - Paired with a concrete product change
+> - Connected to a verified Git commit in this repository
+
+---
+
+## Required Mapping Schema
+
+Each entry must contain:
+
+| Field | Description |
+|---|---|
+| **User ID** | Must match a User ID in `docs/USER_GROWTH.md` and `docs/user-feedback.xlsx` |
+| **Name** | Real name from Google Form |
+| **Email** | Real email from Google Form (may be anonymized for privacy) |
+| **Wallet Address** | Real Freighter wallet address (starts with G...) |
+| **Feedback Summary** | What the user reported — verbatim or paraphrased clearly |
+| **Improvement Made** | What was changed in the product based on this feedback |
+| **Git Commit ID** | The 7-40 character SHA of the commit that implements the fix |
+| **Git Commit Link** | Full GitHub URL: `https://github.com/ashu19846b-tech/level5/commit/[COMMIT_SHA]` |
+
+---
+
+## ✅ Improvements Shipped from Prior Cohort Feedback
+
+### 1. Wallet Connection UX — Loading States Added
+
+| Field | Value |
+|---|---|
+| **Feedback Theme** | "Uncertainty during Freighter connection — no visual feedback while waiting" |
+| **Improvement Made** | Added Framer Motion animated spinners on wallet connect buttons; live status text showing Connecting → Signed → Submitted → Confirmed |
+| **Files Changed** | `src/pages/BookCylinder.jsx`, `src/lib/freighter.js` |
+| **Git Commit ID** | `2ab22a7` |
+| **Git Commit Link** | https://github.com/ashu19846b-tech/level5/commit/2ab22a7 |
+
+---
+
+### 2. Mobile Responsive Cards — Overflow Fix
+
+| Field | Value |
+|---|---|
+| **Feedback Theme** | "Mobile users reported horizontal scroll and overflow on transaction log tables" |
+| **Improvement Made** | Replaced wide table layouts with responsive card-grid layouts for all breakpoints below 768px |
+| **Files Changed** | `src/components/dashboard/*.jsx` |
+| **Git Commit ID** | `2ab22a7` |
+| **Git Commit Link** | https://github.com/ashu19846b-tech/level5/commit/2ab22a7 |
+
+---
+
+### 3. Testnet Status Banner — Added September 2026
+
+| Field | Value |
+|---|---|
+| **Feedback Theme** | "Unclear whether the app was on testnet or mainnet — confused new users" |
+| **Improvement Made** | Added persistent Testnet Banner at top of all dashboard pages with network name, contract ID, Friendbot link, and Explorer link |
+| **Files Changed** | `src/components/TestnetBanner.jsx`, `src/components/Layout.jsx` |
+| **Git Commit ID** | 🟡 USER ACTION REQUIRED — add commit SHA after `git commit` |
+| **Git Commit Link** | 🟡 USER ACTION REQUIRED — `https://github.com/ashu19846b-tech/level5/commit/[SHA]` |
+
+---
+
+### 4. In-App Feedback Modal — Added September 2026
+
+| Field | Value |
+|---|---|
+| **Feedback Theme** | "Testers had to switch tabs to fill the Google Form — wanted a faster way to give feedback in-app" |
+| **Improvement Made** | Shipped a modal feedback widget in AppHeader with star rating (1-5), feature selector, name, email, and feedback text. Links to official Google Form for verified submission. |
+| **Files Changed** | `src/components/FeedbackModal.jsx`, `src/components/dashboard/AppHeader.jsx` |
+| **Git Commit ID** | 🟡 USER ACTION REQUIRED — add commit SHA after `git commit` |
+| **Git Commit Link** | 🟡 USER ACTION REQUIRED — `https://github.com/ashu19846b-tech/level5/commit/[SHA]` |
+
+---
+
+### 5. Analytics Telemetry Module — Added September 2026
+
+| Field | Value |
+|---|---|
+| **Feedback Theme** | "No way to track which features are actually being used by real users" |
+| **Improvement Made** | Added `src/lib/analytics.js` module tracking 10 core user funnel events with Plausible integration and localStorage session buffering |
+| **Files Changed** | `src/lib/analytics.js` |
+| **Git Commit ID** | 🟡 USER ACTION REQUIRED — add commit SHA after `git commit` |
+| **Git Commit Link** | 🟡 USER ACTION REQUIRED — `https://github.com/ashu19846b-tech/level5/commit/[SHA]` |
+
+---
+
+## 🟡 Template — September 2026 Real User Feedback Rows
+
+> Fill these rows as you collect **real feedback** from **real September testnet users**.
+> DO NOT fabricate user IDs, wallet addresses, or feedback.
+
+| User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID | Git Commit Link |
+|---|---|---|---|---|---|---|---|
+| USR-001 | [Real name] | [Real email] | [G...wallet] | [Real feedback] | [What changed] | [SHA] | [GitHub link] |
+| USR-002 | ... | ... | ... | ... | ... | ... | ... |
+
+---
+
+## 📎 Related Documents
+
+- [USER_GROWTH.md](./USER_GROWTH.md) — Full user registry with wallet addresses
+- [user-feedback.xlsx](./user-feedback.xlsx) — Excel sheet for download submission
+- [GOOGLE_FORM_SETUP.md](./GOOGLE_FORM_SETUP.md) — How to set up and export the feedback form
+- [SEPTEMBER_2026_AUDIT.md](./SEPTEMBER_2026_AUDIT.md) — Git commit audit for September activity
