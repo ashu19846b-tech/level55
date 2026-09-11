@@ -60,8 +60,8 @@ Each entry must contain:
 | **Feedback Theme** | "Unclear whether the app was on testnet or mainnet — confused new users" |
 | **Improvement Made** | Added persistent Testnet Banner at top of all dashboard pages with network name, contract ID, Friendbot link, and Explorer link |
 | **Files Changed** | `src/components/TestnetBanner.jsx`, `src/components/Layout.jsx` |
-| **Git Commit ID** | 🟡 USER ACTION REQUIRED — add commit SHA after `git commit` |
-| **Git Commit Link** | 🟡 USER ACTION REQUIRED — `https://github.com/ashu19846b-tech/level5/commit/[SHA]` |
+| **Git Commit ID** | `6cf800f` |
+| **Git Commit Link** | https://github.com/ashu19846b-tech/level5/commit/6cf800f |
 
 ---
 
@@ -72,8 +72,8 @@ Each entry must contain:
 | **Feedback Theme** | "Testers had to switch tabs to fill the Google Form — wanted a faster way to give feedback in-app" |
 | **Improvement Made** | Shipped a modal feedback widget in AppHeader with star rating (1-5), feature selector, name, email, and feedback text. Links to official Google Form for verified submission. |
 | **Files Changed** | `src/components/FeedbackModal.jsx`, `src/components/dashboard/AppHeader.jsx` |
-| **Git Commit ID** | 🟡 USER ACTION REQUIRED — add commit SHA after `git commit` |
-| **Git Commit Link** | 🟡 USER ACTION REQUIRED — `https://github.com/ashu19846b-tech/level5/commit/[SHA]` |
+| **Git Commit ID** | `81be940` |
+| **Git Commit Link** | https://github.com/ashu19846b-tech/level5/commit/81be940 |
 
 ---
 
@@ -82,10 +82,22 @@ Each entry must contain:
 | Field | Value |
 |---|---|
 | **Feedback Theme** | "No way to track which features are actually being used by real users" |
-| **Improvement Made** | Added `src/lib/analytics.js` module tracking 10 core user funnel events with Plausible integration and localStorage session buffering |
+| **Improvement Made** | Added `src/lib/analytics.js` module tracking 15 core user funnel events with Plausible integration and localStorage session buffering |
 | **Files Changed** | `src/lib/analytics.js` |
-| **Git Commit ID** | 🟡 USER ACTION REQUIRED — add commit SHA after `git commit` |
-| **Git Commit Link** | 🟡 USER ACTION REQUIRED — `https://github.com/ashu19846b-tech/level5/commit/[SHA]` |
+| **Git Commit ID** | `faf9086` |
+| **Git Commit Link** | https://github.com/ashu19846b-tech/level5/commit/faf9086 |
+
+---
+
+### 6. Transaction Telemetry & Booking UX — Added September 2026
+
+| Field | Value |
+|---|---|
+| **Feedback Theme** | "Need visibility into booking step progress and Freighter transaction prompt lifecycle" |
+| **Improvement Made** | Integrated live event tracking into BookCylinder.jsx for step progression, signature prompt, transaction success, and error logging |
+| **Files Changed** | `src/pages/BookCylinder.jsx` |
+| **Git Commit ID** | `da2aa5d` |
+| **Git Commit Link** | https://github.com/ashu19846b-tech/level5/commit/da2aa5d |
 
 ---
 
