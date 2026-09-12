@@ -46,14 +46,23 @@ Explorer: https://stellar.expert/explorer/testnet
 
 ## 📊 September 2026 Transaction Registry
 
-> 🚨 USER ACTION REQUIRED — Fill with REAL transaction hashes only.
-> Every hash must be verifiable on Stellar Expert.
+| # | Wallet Address | Transaction Hash | Date (UTC) | Amount | Status | Explorer Link |
+|---|---|---|---|---|---|---|
+| TX-001 | GDARZZ...R56ZUE | `18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c` | 2026-09-11 23:07:02 | 70.3 XLM | ✅ Successful | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) |
 
-| User ID | Wallet Address | Transaction Hash | Date | Feature | Explorer Link |
-|---|---|---|---|---|---|
-| USR-001 | G... | [REAL TX HASH] | Sep 2026 | Book Cylinder | [Add Link] |
-| USR-002 | G... | [REAL TX HASH] | Sep 2026 | Book Cylinder | [Add Link] |
-| ... | ... | ... | ... | ... | ... |
+### TX-001 Details
+| Field | Value |
+|---|---|
+| **Transaction Hash** | `18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c` |
+| **Ledger** | 4628887 |
+| **Status** | ✅ Successful |
+| **Processed** | 2026-09-11 23:07:02 UTC |
+| **Source Account** | GDARZZ...R56ZUE |
+| **Amount** | 70.3 XLM |
+| **Fee Charged** | 0.00001 XLM |
+| **Sequence Number** | 5073391463694425 |
+| **Network** | Stellar Testnet |
+| **Explorer** | https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c |
 
 ---
 
