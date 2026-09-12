@@ -5,25 +5,25 @@
 [![Stellar Network](https://img.shields.io/badge/Network-Stellar%20Testnet-blue?style=for-the-badge&logo=stellar)](https://stellar.expert/explorer/testnet)
 [![Level 5 Blue Belt](https://img.shields.io/badge/Level-5%20Blue%20Belt%20Submission-blueviolet?style=for-the-badge)](docs/LEVEL5_SUBMISSION_CHECKLIST.md)
 [![Vercel Deployment](https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel)](https://level6-2mgt.vercel.app/)
-[![CI/CD Pipeline](https://github.com/ashu19846b-tech/level5/actions/workflows/ci.yml/badge.svg)](https://github.com/ashu19846b-tech/level5/actions)
+[![CI/CD Pipeline](https://github.com/ashu19846b-tech/level55/actions/workflows/ci.yml/badge.svg)](https://github.com/ashu19846b-tech/level55/actions)
 
 ---
 
-## 🌟 Overview
+## 🌟 1. Project Overview
 
 **GASCHAIN** is a production-ready decentralized LPG management protocol designed to eliminate supply chain fraud, automate government subsidies, and provide complete transparency from Manufacturer to Consumer — powered by Soroban smart contracts on Stellar.
 
 > **This is a September 2026 Level 5 — Blue Belt submission** for the RiseIn Stellar Developer Program.
 
 - **Live App**: [https://level6-2mgt.vercel.app/](https://level6-2mgt.vercel.app/)
-- **Demo Video**: [https://youtu.be/zZf87KZLVSM](https://youtu.be/zZf87KZLVSM) *(Level 4 video — 🟡 Level 5 demo being recorded)*
+- **Demo Video**: [▶️ Watch Level 5 Demo on YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab)
 - **Contract Address**: `CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R`
 - **Explorer**: [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R)
-- **GitHub**: [ashu19846b-tech/level5](https://github.com/ashu19846b-tech/level5)
+- **GitHub**: [ashu19846b-tech/level55](https://github.com/ashu19846b-tech/level55)
 
 ---
 
-## ✨ Core Features
+## ✨ 4. Core Features
 
 - **Decentralized Cylinder Booking**: Secure, on-chain recording of LPG bookings with immutable Booking IDs
 - **Real-time Chain of Custody**: End-to-end tracking from Central Depot to final consumer
@@ -33,6 +33,8 @@
 - **Analytics Telemetry**: 15-event funnel tracking from wallet connect to feedback submission
 - **Enterprise Monitoring**: Real-time ledger heartbeat monitoring at `/ledger`
 - **Metrics Dashboard**: Live DAU, TPS, and transaction volume tracking at `/dashboard/metrics`
+- **Copy Address Button**: One-click copy for wallet and contract addresses
+- **Branded 404 Page**: Custom error page for unknown routes with navigation back to dashboard
 
 ---
 
@@ -97,8 +99,8 @@ CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R
 
 ```bash
 # Clone repository
-git clone https://github.com/ashu19846b-tech/level5.git
-cd level5
+git clone https://github.com/ashu19846b-tech/level55.git
+cd level55
 
 # Install dependencies
 npm install
@@ -136,14 +138,28 @@ npm run preview
 
 ---
 
-## 📊 User Feedback Data
+## 📊 11. User Growth & Proof of Users
+
+> [!IMPORTANT]
+> **Previous reviewer comment**: "No users onboarded in August — only users onboarded during the applicable period are counted."
+>
+> **Honest Status**: The Google Form and app were active in September 2026. August 2026 users are NOT counted per reviewer requirement. September responses are tracked in the sheet below.
 
 | Resource | Link |
 |---|---|
-| **Google Form (Active)** | [Submit Feedback](https://docs.google.com/forms/d/e/1FAIpQLSeEEkw9WKm8rf73X4fk0EcvWSQWT8G3TvID-9w_82UFZOEj2w/viewform) |
-| **Live Response Sheet** | [Google Sheets](https://docs.google.com/spreadsheets/d/1EUd0swodawwLFv8Btvce9rkJ55qmvpYR-9wI3NWukZw/edit) |
-| **Excel Feedback Template** | [user-feedback.xlsx](docs/user-feedback.xlsx) |
-| **Public Excel Link** | 🟡 USER ACTION REQUIRED — Upload to Google Drive and add link here |
+| **Google Form (Active)** | [Submit Feedback](https://docs.google.com/forms/d/e/1FAIpQLScGh_ghH6mjY2NRtHgApPG4fKj_71iciy1Dr8CQaw_Q2LTqSQ/viewform?usp=publish-editor) |
+| **Live Response Sheet** | [Google Sheets — September 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
+| **Excel Feedback Export** | [docs/user-feedback.xlsx](docs/user-feedback.xlsx) |
+| **Public Excel Link** | 🟡 USER ACTION REQUIRED — Upload `docs/user-feedback.xlsx` to Google Drive and paste link here |
+
+### How Feedback Will Be Used for Next Phase
+
+All user feedback collected via the Google Form is:
+1. **Exported to Excel** for structured analysis (see `docs/user-feedback.xlsx`)
+2. **Categorized** into UX, feature, performance, and onboarding themes
+3. **Mapped to Git commits** via `docs/FEEDBACK_IMPLEMENTATION.md` with exact commit SHAs
+4. **Implemented** as product improvements in subsequent releases
+5. **Documented** so reviewers can verify what changed and why
 
 ---
 
@@ -162,20 +178,37 @@ For the complete mapping with User IDs, emails, and wallet addresses:
 
 ---
 
-## 👥 September 2026 User Onboarding
+## 📈 12. Real Transaction Evidence
 
-> **Level 5 Requirement**: 50+ testnet users onboarded during September 2026.
+One verified Stellar testnet transaction is documented as on-chain activity proof:
 
-### September Cohort Status
-🟡 **USER ACTION REQUIRED** — 50 real September 2026 testnet users must be onboarded.
+| Field | Value |
+|---|---|
+| **Transaction Hash** | `18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c` |
+| **Date (UTC)** | 2026-09-11 23:07:02 |
+| **Ledger** | 4628887 |
+| **Status** | ✅ Successful |
+| **Network** | Stellar Testnet |
+| **Explorer** | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) |
 
-### Onboarding Process
-1. Share the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeEEkw9WKm8rf73X4fk0EcvWSQWT8G3TvID-9w_82UFZOEj2w/viewform) with testers
-2. Each tester: Installs Freighter → Gets testnet XLM → Books a cylinder → Submits form
-3. Verify each wallet on [Stellar Expert](https://stellar.expert/explorer/testnet)
-4. Record in [docs/USER_GROWTH.md](docs/USER_GROWTH.md) and [docs/user-feedback.xlsx](docs/user-feedback.xlsx)
+See full evidence: **[docs/TRANSACTION_EVIDENCE.md](docs/TRANSACTION_EVIDENCE.md)**
 
-See full strategy: **[docs/USER_GROWTH.md](docs/USER_GROWTH.md)**
+---
+
+## 📊 13. Analytics Evidence
+
+### Plausible Analytics (Privacy-First)
+```html
+<script async defer data-domain="level6-2mgt.vercel.app"
+  src="https://plausible.io/js/plausible.js"></script>
+```
+
+- **Dashboard**: [plausible.io/level6-2mgt.vercel.app](https://plausible.io/level6-2mgt.vercel.app)
+- **Tracked Events**: Page views, wallet connection, booking completions
+
+> 🟡 Analytics screenshots: **MANUAL TASK** — Export from Plausible and add to `docs/` before final submission.
+
+See: **[docs/ANALYTICS.md](docs/ANALYTICS.md)**
 
 ---
 
@@ -198,22 +231,21 @@ See: **[docs/ANALYTICS.md](docs/ANALYTICS.md)**
 
 ---
 
-## 🎯 Pitch Deck
+## 🎯 9. Pitch Deck
 
-| Format | Link |
-|---|---|
-| **PPTX (Local)** | [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH_DECK.pptx) |
-| **Google Slides (Public)** | 🟡 USER ACTION REQUIRED — Upload to Google Drive → Share publicly → Paste link here |
+### [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?slide=id.p1#slide=id.p1)
 
-> The PPTX file contains 14 professional slides covering: Problem, Solution, Architecture, Market Opportunity, Traction, Feedback, Growth Strategy, Roadmap, and Team.
+> The pitch deck covers: Problem, Solution, Architecture, Market Opportunity, Traction, Feedback, Growth Strategy, Roadmap, and Team — 14 professional slides.
+
+Local PPTX copy: [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH_DECK.pptx)
 
 ---
 
-## 🎬 Demo Video
+## 🎬 10. Demo Video
 
 | Version | Link |
 |---|---|
-| Level 5 Demo (September 2026) | 🟡 USER ACTION REQUIRED — Record per [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md) |
+| **Level 5 Demo (September 2026)** | [▶️ Watch on YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
 | Level 4 Demo (Reference) | [youtu.be/zZf87KZLVSM](https://youtu.be/zZf87KZLVSM) |
 
 ---
@@ -222,12 +254,12 @@ See: **[docs/ANALYTICS.md](docs/ANALYTICS.md)**
 
 > [!WARNING]
 > **Previous submission was rejected because the X/Twitter link pointed to a personal account.**
-> This has been removed. Only a verified Product X page should be linked here.
+> The personal account link has been REMOVED. A dedicated product X/Twitter account has not yet been created.
 
-| Platform | Link |
-|---|---|
-| **Product X / Twitter** | 🟡 USER ACTION REQUIRED — Create a dedicated `@GasChainProtocol` X page and link here |
-| **GitHub** | [ashu19846b-tech/level5](https://github.com/ashu19846b-tech/level5) |
+| Platform | Link | Status |
+|---|---|---|
+| **Product X / Twitter** | 🟡 No official product account exists yet — USER ACTION REQUIRED | ❌ MANUAL |
+| **GitHub** | [ashu19846b-tech/level55](https://github.com/ashu19846b-tech/level55) | ✅ |
 
 ---
 
@@ -276,27 +308,27 @@ See: **[docs/ANALYTICS.md](docs/ANALYTICS.md)**
 
 ---
 
-## 📋 Level 5 Submission Evidence
+## 📋 16. Submission Evidence Checklist
 
 | Requirement | Status | Evidence |
 |---|---|---|
-| Public GitHub | ✅ | [ashu19846b-tech/level5](https://github.com/ashu19846b-tech/level5) |
+| Public GitHub | ✅ | [ashu19846b-tech/level55](https://github.com/ashu19846b-tech/level55) |
 | Live Application | ✅ | [level6-2mgt.vercel.app](https://level6-2mgt.vercel.app/) |
-| Smart Contract | ✅ | [CCVUAGXS...3LN6R](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R) |
+| Smart Contract | ✅ | [CCVUAGXS...3LN6R on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R) |
 | Contract Tests | ✅ | `cargo test` → 1 passed, 0 failed |
-| Frontend Build | ✅ | `npm run build` → ✓ 2853 modules |
-| Google Form | ✅ | [Active Form](https://docs.google.com/forms/d/e/1FAIpQLSeEEkw9WKm8rf73X4fk0EcvWSQWT8G3TvID-9w_82UFZOEj2w/viewform) |
+| Frontend Build | ✅ | `npm run build` passes |
+| Google Form | ✅ | [Active Onboarding Form](https://docs.google.com/forms/d/e/1FAIpQLScGh_ghH6mjY2NRtHgApPG4fKj_71iciy1Dr8CQaw_Q2LTqSQ/viewform?usp=publish-editor) |
 | Excel Feedback | ✅ | [docs/user-feedback.xlsx](docs/user-feedback.xlsx) |
 | Feedback Mapping | ✅ | [docs/FEEDBACK_IMPLEMENTATION.md](docs/FEEDBACK_IMPLEMENTATION.md) |
-| Pitch Deck | ✅ | [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH_DECK.pptx) |
+| Pitch Deck (PPTX) | ✅ | [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH_DECK.pptx) |
+| Pitch Deck (Public) | ✅ | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?slide=id.p1#slide=id.p1) |
 | Analytics | ✅ | [Plausible Dashboard](https://plausible.io/level6-2mgt.vercel.app) |
-| 50+ Sept Users | 🟡 | [docs/USER_GROWTH.md](docs/USER_GROWTH.md) — USER ACTION REQUIRED |
-| Real Transactions | 🟡 | [docs/TRANSACTION_EVIDENCE.md](docs/TRANSACTION_EVIDENCE.md) — USER ACTION REQUIRED |
-| Pitch Deck Link | 🟡 | Upload to Google Drive, verify public — USER ACTION REQUIRED |
-| Excel Public Link | 🟡 | Upload to Google Drive, link here — USER ACTION REQUIRED |
-| Demo Video | 🟡 | Record per [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md) — USER ACTION REQUIRED |
-| Product X Page | 🟡 | Create dedicated product X account — USER ACTION REQUIRED |
-| 20+ Sep Commits | 🟡 | Commit all September work — USER ACTION REQUIRED |
+| Real Transactions | ✅ | [TX Hash on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) |
+| Demo Video | ✅ | [▶️ YouTube — Level 5 Demo](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
+| 50+ Sept Users | 🟡 | Check Google Sheets for Sept 2026 count — USER ACTION REQUIRED |
+| Public Excel Link | 🟡 | Upload docs/user-feedback.xlsx to Google Drive — USER ACTION REQUIRED |
+| Analytics Screenshots | 🟡 | Export from Plausible dashboard — USER ACTION REQUIRED |
+| Product X Page | 🟡 | Create dedicated product X account (personal link REMOVED) — USER ACTION REQUIRED |
 
 ---
 
@@ -310,20 +342,18 @@ See: **[docs/ANALYTICS.md](docs/ANALYTICS.md)**
 
 ---
 
-## 🔗 Submission Links
+## 🔗 Quick Submission Links
 
 | Item | Link |
 |---|---|
 | **Live App** | [level6-2mgt.vercel.app](https://level6-2mgt.vercel.app/) |
-| **GitHub** | [ashu19846b-tech/level5](https://github.com/ashu19846b-tech/level5) |
+| **GitHub** | [ashu19846b-tech/level55](https://github.com/ashu19846b-tech/level55) |
 | **Contract (Testnet)** | [CCVUAGX...3LN6R](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R) |
-| **Google Form** | [Active User Onboarding Form](https://docs.google.com/forms/d/e/1FAIpQLSeEEkw9WKm8rf73X4fk0EcvWSQWT8G3TvID-9w_82UFZOEj2w/viewform) |
-| **User Feedback Sheet** | [Google Sheets](https://docs.google.com/spreadsheets/d/1EUd0swodawwLFv8Btvce9rkJ55qmvpYR-9wI3NWukZw/edit) |
-| **Pitch Deck (PPTX)** | [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH_DECK.pptx) |
-| **Pitch Deck (Public)** | 🟡 ADD GOOGLE DRIVE PUBLIC LINK |
-| **Demo Video** | 🟡 ADD NEW DEMO VIDEO YOUTUBE LINK |
+| **Google Form** | [Active User Onboarding Form](https://docs.google.com/forms/d/e/1FAIpQLScGh_ghH6mjY2NRtHgApPG4fKj_71iciy1Dr8CQaw_Q2LTqSQ/viewform?usp=publish-editor) |
+| **User Feedback Sheet** | [Google Sheets — September 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
+| **Pitch Deck** | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?slide=id.p1#slide=id.p1) |
+| **Demo Video** | [▶️ Level 5 Demo — YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
 | **Analytics** | [Plausible Dashboard](https://plausible.io/level6-2mgt.vercel.app) |
-| **Product X** | 🟡 ADD PRODUCT X PAGE — NOT PERSONAL ACCOUNT |
 | **Submission Checklist** | [docs/LEVEL5_SUBMISSION_CHECKLIST.md](docs/LEVEL5_SUBMISSION_CHECKLIST.md) |
 
 ---
