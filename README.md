@@ -40,8 +40,8 @@ Secure, transparent, and built for million-user scalability on the Stellar netwo
 | Demo Video Link | ✅ | [▶️ YouTube — Level 5 Demo](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
 | Proof of 50+ Users | ✅ | [Google Sheets — 55 August 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
 | Exported Responses / Excel Evidence | ✅ | [Google Sheets — 55 August 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
-| Analytics / Transaction Activity Proof | ✅ | [TX on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) · [Plausible Dashboard](https://plausible.io/level6-2mgt.vercel.app) |
-| Updated README & Documentation | ✅ | This document |
+| Analytics / Transaction Activity Proof | ✅ | [TX on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) · Analytics via `src/lib/analytics.js` (15 funnel events — Plausible dashboard is private/login-required) |
+| Updated README & Documentation | ✅ | [README.md](https://github.com/ashu19846b-tech/level55/blob/main/README.md) · [docs/](https://github.com/ashu19846b-tech/level55/tree/main/docs) |
 | User Feedback Iteration Summary | ✅ | See [Product Improvements](#-product-improvements-based-on-user-feedback) section below |
 | Smart Contract (Testnet) | ✅ | [CCVUAGXS...3LN6R](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R) |
 | Google Form (User Onboarding) | ✅ | [Active Onboarding Form](https://docs.google.com/forms/d/e/1FAIpQLScGh_ghH6mjY2NRtHgApPG4fKj_71iciy1Dr8CQaw_Q2LTqSQ/viewform?usp=publish-editor) |
@@ -271,14 +271,15 @@ Full evidence: [docs/TRANSACTION_EVIDENCE.md](docs/TRANSACTION_EVIDENCE.md)
 
 ## 📈 Analytics & Active Usage Proof
 
-### Plausible Analytics
+### Plausible Analytics (Configured)
 ```html
 <script async defer data-domain="level6-2mgt.vercel.app"
   src="https://plausible.io/js/plausible.js"></script>
 ```
 
-- **Dashboard**: [plausible.io/level6-2mgt.vercel.app](https://plausible.io/level6-2mgt.vercel.app)
-- **Tracked**: Page views · Wallet connections · Booking completions · Feedback submissions
+- **Domain tracked**: `level6-2mgt.vercel.app`
+- **Note**: Plausible dashboards are private by default — only the account owner can view live stats. Screenshots to be provided as evidence per `docs/EVIDENCE_CHECKLIST.md`.
+- **Tracked events**: Page views · Wallet connections · Booking completions · Feedback submissions
 
 ### Custom Event Telemetry (`src/lib/analytics.js`)
 15 funnel events tracked end-to-end:
@@ -395,7 +396,7 @@ VITE_BASE44_FUNCTIONS_VERSION=v1
 | **User Feedback Sheet (Excel Evidence)** | [📊 Google Sheets — August 2026 — 50+ Users](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
 | **Pitch Deck** | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?usp=sharing&ouid=112689875951804711106&rtpof=true&sd=true) |
 | **Demo Video** | [▶️ Level 5 Demo — YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
-| **Analytics** | [Plausible Dashboard](https://plausible.io/level6-2mgt.vercel.app) |
+| **Analytics** | Custom telemetry via `src/lib/analytics.js` — 15 events tracked · Plausible configured on `level6-2mgt.vercel.app` (dashboard is private) |
 | **Transaction Proof** | [TX Hash on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) |
 | **Product X / Twitter** | [@StegoVaultWeb3](https://x.com/StegoVaultWeb3) |
 | **Submission Checklist** | [docs/LEVEL5_SUBMISSION_CHECKLIST.md](docs/LEVEL5_SUBMISSION_CHECKLIST.md) |
