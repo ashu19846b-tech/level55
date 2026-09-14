@@ -30,7 +30,27 @@ window.plausible('wallet_connected', { props: { wallet: 'G...' } });
 
 ### Dashboard
 - **URL**: https://plausible.io/level6-2mgt.vercel.app
-- **Access**: Public stats page (no login required to view)
+- **Access**: Private — login required (account owner only). Export screenshots for submission evidence.
+
+---
+
+## 3. SPA Route-Change Tracking (`App.jsx`)
+
+Plausible's script auto-tracks the initial hard page load. For client-side React Router navigations, a `PlausiblePageTracker` component is mounted inside the Router in `App.jsx`:
+
+```jsx
+function PlausiblePageTracker() {
+  const location = useLocation();
+  useEffect(() => {
+    if (typeof window.plausible === 'function') {
+      window.plausible('pageview');
+    }
+  }, [location.pathname]);
+  return null;
+}
+```
+
+This ensures every route change (`/dashboard`, `/book`, `/bookings`, `/supply-chain`, etc.) is recorded as a pageview in Plausible.
 
 ---
 

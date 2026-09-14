@@ -271,23 +271,32 @@ Full evidence: [docs/TRANSACTION_EVIDENCE.md](docs/TRANSACTION_EVIDENCE.md)
 
 ## 📈 Analytics & Active Usage Proof
 
-### Plausible Analytics (Configured)
+### Plausible Analytics (Configured & Active)
 ```html
+<!-- index.html — fires on initial page load -->
 <script async defer data-domain="level6-2mgt.vercel.app"
   src="https://plausible.io/js/plausible.js"></script>
 ```
 
-- **Domain tracked**: `level6-2mgt.vercel.app`
-- **Note**: Plausible dashboards are private by default — only the account owner can view live stats. Screenshots to be provided as evidence per `docs/EVIDENCE_CHECKLIST.md`.
-- **Tracked events**: Page views · Wallet connections · Booking completions · Feedback submissions
+Plausible is integrated in two layers:
 
-### Custom Event Telemetry (`src/lib/analytics.js`)
-15 funnel events tracked end-to-end:
-```
-wallet_connected → booking_initiated → tx_signed → tx_submitted → tx_success → feedback_submitted
-```
+**1. Automatic page tracking** — `PlausiblePageTracker` component in `App.jsx` fires `plausible('pageview')` on every React Router navigation, covering all client-side route changes in the SPA.
 
-Full docs: [docs/ANALYTICS.md](docs/ANALYTICS.md)
+**2. Custom event tracking** — `src/lib/analytics.js` calls `window.plausible(eventName, { props })` for the following events whenever they fire:
+
+| Event | Where fired |
+|---|---|
+| `booking_initiated` | User starts Book Cylinder flow |
+| `tx_sign_prompt` | Freighter signing popup triggered |
+| `tx_success` | Transaction confirmed on ledger |
+| `tx_failed` | Transaction failed/rejected |
+| `feature_used` | Booking step progress, booking created |
+| `feedback_modal_opened` | Feedback modal opened |
+| `feedback_submitted` | User submitted feedback |
+
+The Plausible dashboard (`plausible.io/level6-2mgt.vercel.app`) is private — only the account owner can view live stats. To share analytics proof, export a screenshot from your Plausible account and add it to `public/screenshots/`.
+
+Full telemetry docs: [docs/ANALYTICS.md](docs/ANALYTICS.md)
 
 ---
 

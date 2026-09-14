@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
@@ -15,6 +16,21 @@ import BlockchainLedger from './pages/BlockchainLedger';
 import BlockchainSimulator from './components/BlockchainSimulator';
 import Landing from './pages/Landing';
 import MetricsDashboard from './pages/MetricsDashboard';
+
+/**
+ * Fires a Plausible pageview on every React Router navigation.
+ * Plausible's script auto-tracks the initial hard load; this hook
+ * covers all subsequent client-side route changes in the SPA.
+ */
+function PlausiblePageTracker() {
+  const location = useLocation();
+  useEffect(() => {
+    if (typeof window.plausible === 'function') {
+      window.plausible('pageview');
+    }
+  }, [location.pathname]);
+  return null;
+}
 
 const AuthenticatedApp = () => {
   const { isAuthenticated, isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -71,6 +87,7 @@ function App() {
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <AuthProvider>
         <QueryClientProvider client={queryClientInstance}>
+          <PlausiblePageTracker />
           <AuthenticatedApp />
           <BlockchainSimulator />
           <Toaster />
