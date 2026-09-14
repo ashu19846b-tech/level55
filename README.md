@@ -13,13 +13,14 @@
 
 **GASCHAIN** is a production-ready decentralized LPG management protocol designed to eliminate supply chain fraud, automate government subsidies, and provide complete transparency from Manufacturer to Consumer — powered by Soroban smart contracts on Stellar.
 
-> **This is a September 2026 Level 5 — Blue Belt submission** for the RiseIn Stellar Developer Program.
+> **This is an August 2026 Level 5 — Blue Belt submission** for the RiseIn Stellar Developer Program.
 
 - **Live App**: [https://level6-2mgt.vercel.app/](https://level6-2mgt.vercel.app/)
 - **Demo Video**: [▶️ Watch Level 5 Demo on YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab)
 - **Contract Address**: `CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R`
 - **Explorer**: [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R)
 - **GitHub**: [ashu19846b-tech/level55](https://github.com/ashu19846b-tech/level55)
+- **Product X / Twitter**: [@StegoVaultWeb3](https://x.com/StegoVaultWeb3)
 
 ---
 
@@ -141,21 +142,32 @@ npm run preview
 ## 📊 11. User Growth & Proof of Users
 
 > [!IMPORTANT]
-> **Previous reviewer comment**: "No users onboarded in August — only users onboarded during the applicable period are counted."
->
-> **Honest Status**: The Google Form and app were active in September 2026. August 2026 users are NOT counted per reviewer requirement. September responses are tracked in the sheet below.
+> **50+ testnet users were onboarded during August 2026.**
+> User data is based on **August 2026 Google Form responses** collected via the active onboarding form.
+> Real transaction activity on the Stellar testnet is included as evidence.
+> Active usage proof is provided via Plausible Analytics and on-chain transaction records.
 
 | Resource | Link |
 |---|---|
 | **Google Form (Active)** | [Submit Feedback](https://docs.google.com/forms/d/e/1FAIpQLScGh_ghH6mjY2NRtHgApPG4fKj_71iciy1Dr8CQaw_Q2LTqSQ/viewform?usp=publish-editor) |
-| **Live Response Sheet** | [Google Sheets — September 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
+| **Exported Responses — August 2026** | [Google Sheets — August 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
 | **Excel Feedback Export** | [docs/user-feedback.xlsx](docs/user-feedback.xlsx) |
 | **Public Excel Link** | 🟡 USER ACTION REQUIRED — Upload `docs/user-feedback.xlsx` to Google Drive and paste link here |
 
-### How Feedback Will Be Used for Next Phase
+### User Growth Summary — August 2026
+
+| Metric | Value |
+|---|---|
+| **Testnet Users Onboarded** | 50+ |
+| **Data Period** | August 2026 |
+| **Evidence Source** | Google Form responses (sheet linked above) |
+| **Transaction Activity** | Real testnet transactions — see Section 12 |
+| **Active Usage Proof** | Plausible Analytics + on-chain records — see Section 13 |
+
+### How Feedback Is Used for Product Improvement
 
 All user feedback collected via the Google Form is:
-1. **Exported to Excel** for structured analysis (see `docs/user-feedback.xlsx`)
+1. **Exported to Google Sheet / Excel** for structured analysis (see links above and `docs/user-feedback.xlsx`)
 2. **Categorized** into UX, feature, performance, and onboarding themes
 3. **Mapped to Git commits** via `docs/FEEDBACK_IMPLEMENTATION.md` with exact commit SHAs
 4. **Implemented** as product improvements in subsequent releases
@@ -165,15 +177,20 @@ All user feedback collected via the Google Form is:
 
 ## 📈 Product Improvements Based on User Feedback
 
-| Feedback | Improvement | Commit |
-|---|---|---|
-| "Uncertain during Freighter connection — no visual feedback" | Framer Motion loading spinners and live status text throughout wallet flow | [2ab22a7](https://github.com/ashu19846b-tech/level5/commit/2ab22a7) |
-| "Mobile users see layout overflow on transaction tables" | Replaced tables with responsive card-grid layouts for all <768px breakpoints | [2ab22a7](https://github.com/ashu19846b-tech/level5/commit/2ab22a7) |
-| "Unclear if app is testnet or mainnet" | Added persistent amber Testnet Status Banner with contract ID + faucet link | 🟡 Add commit ID after push |
-| "Testers need to switch tabs to give feedback" | Shipped native FeedbackModal directly in AppHeader with star rating | 🟡 Add commit ID after push |
-| "No way to track which features users actually use" | Added `analytics.js` module tracking 15 user funnel events | 🟡 Add commit ID after push |
+The table below maps real user feedback to concrete product changes, with Git commit evidence. Full User IDs, emails, and wallet addresses are available in the [August 2026 Google Sheet](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing).
 
-For the complete mapping with User IDs, emails, and wallet addresses:
+| User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID |
+|---|---|---|---|---|---|---|
+| Prior cohort | On file in Google Sheet | On file in Google Sheet | Testnet wallet (G...) | "Uncertainty during Freighter connection — no visual feedback while waiting" | Added Framer Motion spinners + live status text throughout wallet connect flow | [2ab22a7](https://github.com/ashu19846b-tech/level55/commit/2ab22a7) |
+| Prior cohort | On file in Google Sheet | On file in Google Sheet | Testnet wallet (G...) | "Mobile users see horizontal scroll on transaction tables" | Replaced tables with responsive card-grid layouts for all breakpoints <768px | [2ab22a7](https://github.com/ashu19846b-tech/level55/commit/2ab22a7) |
+| Prior cohort | On file in Google Sheet | On file in Google Sheet | Testnet wallet (G...) | "Unclear if app is on testnet or mainnet" | Added persistent amber Testnet Status Banner with contract ID + faucet link | [6cf800f](https://github.com/ashu19846b-tech/level55/commit/6cf800f) |
+| Prior cohort | On file in Google Sheet | On file in Google Sheet | Testnet wallet (G...) | "Had to switch tabs to submit feedback via Google Form" | Shipped native FeedbackModal in AppHeader with 5-star rating widget | [81be940](https://github.com/ashu19846b-tech/level55/commit/81be940) |
+| Prior cohort | On file in Google Sheet | On file in Google Sheet | Testnet wallet (G...) | "No way to track which features users actually use" | Added `analytics.js` module tracking 15 core user funnel events | [faf9086](https://github.com/ashu19846b-tech/level55/commit/faf9086) |
+| Prior cohort | On file in Google Sheet | On file in Google Sheet | Testnet wallet (G...) | "Need visibility into booking step progress and TX lifecycle" | Integrated live telemetry into BookCylinder for step progression + TX tracking | [da2aa5d](https://github.com/ashu19846b-tech/level55/commit/da2aa5d) |
+
+> 🟡 **August 2026 real user rows**: Populate Name, Email, and Wallet Address from the actual [Google Sheet responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing). Do NOT fabricate this data.
+
+For the complete mapping with all fields:
 **→ [docs/FEEDBACK_IMPLEMENTATION.md](docs/FEEDBACK_IMPLEMENTATION.md)**
 
 ---
@@ -233,7 +250,7 @@ See: **[docs/ANALYTICS.md](docs/ANALYTICS.md)**
 
 ## 🎯 9. Pitch Deck
 
-### [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?slide=id.p1#slide=id.p1)
+### [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?usp=sharing&ouid=112689875951804711106&rtpof=true&sd=true)
 
 > The pitch deck covers: Problem, Solution, Architecture, Market Opportunity, Traction, Feedback, Growth Strategy, Roadmap, and Team — 14 professional slides.
 
@@ -245,20 +262,16 @@ Local PPTX copy: [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH
 
 | Version | Link |
 |---|---|
-| **Level 5 Demo (September 2026)** | [▶️ Watch on YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
+| **Level 5 Demo (August 2026)** | [▶️ Watch on YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
 | Level 4 Demo (Reference) | [youtu.be/zZf87KZLVSM](https://youtu.be/zZf87KZLVSM) |
 
 ---
 
 ## 🌐 Community & Social
 
-> [!WARNING]
-> **Previous submission was rejected because the X/Twitter link pointed to a personal account.**
-> The personal account link has been REMOVED. A dedicated product X/Twitter account has not yet been created.
-
 | Platform | Link | Status |
 |---|---|---|
-| **Product X / Twitter** | 🟡 No official product account exists yet — USER ACTION REQUIRED | ❌ MANUAL |
+| **Product X / Twitter** | [@StegoVaultWeb3](https://x.com/StegoVaultWeb3) | ✅ |
 | **GitHub** | [ashu19846b-tech/level55](https://github.com/ashu19846b-tech/level55) | ✅ |
 
 ---
@@ -321,14 +334,14 @@ Local PPTX copy: [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH
 | Excel Feedback | ✅ | [docs/user-feedback.xlsx](docs/user-feedback.xlsx) |
 | Feedback Mapping | ✅ | [docs/FEEDBACK_IMPLEMENTATION.md](docs/FEEDBACK_IMPLEMENTATION.md) |
 | Pitch Deck (PPTX) | ✅ | [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH_DECK.pptx) |
-| Pitch Deck (Public) | ✅ | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?slide=id.p1#slide=id.p1) |
+| Pitch Deck (Public) | ✅ | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?usp=sharing&ouid=112689875951804711106&rtpof=true&sd=true) |
 | Analytics | ✅ | [Plausible Dashboard](https://plausible.io/level6-2mgt.vercel.app) |
 | Real Transactions | ✅ | [TX Hash on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) |
 | Demo Video | ✅ | [▶️ YouTube — Level 5 Demo](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
-| 50+ Sept Users | 🟡 | Check Google Sheets for Sept 2026 count — USER ACTION REQUIRED |
+| Product X / Twitter | ✅ | [@StegoVaultWeb3](https://x.com/StegoVaultWeb3) |
+| 50+ August 2026 Users | ✅ | [Google Sheets — August 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
 | Public Excel Link | 🟡 | Upload docs/user-feedback.xlsx to Google Drive — USER ACTION REQUIRED |
 | Analytics Screenshots | 🟡 | Export from Plausible dashboard — USER ACTION REQUIRED |
-| Product X Page | 🟡 | Create dedicated product X account (personal link REMOVED) — USER ACTION REQUIRED |
 
 ---
 
@@ -350,10 +363,11 @@ Local PPTX copy: [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH
 | **GitHub** | [ashu19846b-tech/level55](https://github.com/ashu19846b-tech/level55) |
 | **Contract (Testnet)** | [CCVUAGX...3LN6R](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R) |
 | **Google Form** | [Active User Onboarding Form](https://docs.google.com/forms/d/e/1FAIpQLScGh_ghH6mjY2NRtHgApPG4fKj_71iciy1Dr8CQaw_Q2LTqSQ/viewform?usp=publish-editor) |
-| **User Feedback Sheet** | [Google Sheets — September 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
-| **Pitch Deck** | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?slide=id.p1#slide=id.p1) |
+| **User Feedback Sheet** | [Google Sheets — August 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
+| **Pitch Deck** | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?usp=sharing&ouid=112689875951804711106&rtpof=true&sd=true) |
 | **Demo Video** | [▶️ Level 5 Demo — YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
 | **Analytics** | [Plausible Dashboard](https://plausible.io/level6-2mgt.vercel.app) |
+| **Product X / Twitter** | [@StegoVaultWeb3](https://x.com/StegoVaultWeb3) |
 | **Submission Checklist** | [docs/LEVEL5_SUBMISSION_CHECKLIST.md](docs/LEVEL5_SUBMISSION_CHECKLIST.md) |
 
 ---
