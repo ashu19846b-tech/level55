@@ -411,6 +411,8 @@ VITE_BASE44_FUNCTIONS_VERSION=v1
 | **Submission Checklist** | [docs/LEVEL5_SUBMISSION_CHECKLIST.md](docs/LEVEL5_SUBMISSION_CHECKLIST.md) |
 
 ---
+## Analytics
+<img width="1855" height="877" alt="Screenshot 2026-09-15 053245" src="https://github.com/user-attachments/assets/29b8c3b6-e899-4b08-a189-dab6f74a45b1" />
 
 ## 📜 License
 
