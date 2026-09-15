@@ -176,7 +176,7 @@ The pitch deck covers 14 professional slides:
 | 10 | Future Roadmap |
 | 11–14 | Team, Technology Stack, Tokenomics, CTA |
 
-Local PPTX: [presentation/LEVEL5_PITCH_DECK.pptx](presentation/LEVEL5_PITCH_DECK.pptx)
+Local PPTX: [presentation/LEVEL5_PITCH_DECK.pptx](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?usp=sharing&ouid=112689875951804711106&rtpof=true&sd=true)
 
 ---
 
