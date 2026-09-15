@@ -6,6 +6,7 @@ Secure, transparent, and built for million-user scalability on the Stellar netwo
 [![Stellar Network](https://img.shields.io/badge/Network-Stellar%20Testnet-blue?style=for-the-badge&logo=stellar)](https://stellar.expert/explorer/testnet)
 [![Level 5 Blue Belt](https://img.shields.io/badge/Level-5%20Blue%20Belt%20Submission-blueviolet?style=for-the-badge)](docs/LEVEL5_SUBMISSION_CHECKLIST.md)
 [![Vercel Deployment](https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel)](https://level6-2mgt.vercel.app/)
+[![Netlify Deployment](https://img.shields.io/badge/Deployment-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://stellsr.netlify.app/)
 [![CI/CD](https://github.com/ashu19846b-tech/level55/actions/workflows/ci.yml/badge.svg)](https://github.com/ashu19846b-tech/level55/actions)
 
 ---
@@ -18,7 +19,8 @@ Secure, transparent, and built for million-user scalability on the Stellar netwo
 
 | | |
 |---|---|
-| **Live App** | [https://level6-2mgt.vercel.app/](https://level6-2mgt.vercel.app/) |
+| **Live App (Vercel)** | [https://level6-2mgt.vercel.app/](https://level6-2mgt.vercel.app/) |
+| **Live App (Netlify)** | [https://stellsr.netlify.app/](https://stellsr.netlify.app/) |
 | **Demo Video** | [▶️ Watch Level 5 Demo on YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
 | **Contract Address** | `CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R` |
 | **Contract Explorer** | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R) |
@@ -35,12 +37,12 @@ Secure, transparent, and built for million-user scalability on the Stellar netwo
 |---|---|---|
 | Public GitHub Repository | ✅ | [ashu19846b-tech/level55](https://github.com/ashu19846b-tech/level55) |
 | 20+ Meaningful Commits | ✅ | [View Commit History](https://github.com/ashu19846b-tech/level55/commits/main) |
-| Live Deployed Application | ✅ | [level6-2mgt.vercel.app](https://level6-2mgt.vercel.app/) |
+| Live Deployed Application | ✅ | [level6-2mgt.vercel.app](https://level6-2mgt.vercel.app/) · [stellsr.netlify.app](https://stellsr.netlify.app/) |
 | Pitch Deck Link | ✅ | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?usp=sharing&ouid=112689875951804711106&rtpof=true&sd=true) |
 | Demo Video Link | ✅ | [▶️ YouTube — Level 5 Demo](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
 | Proof of 50+ Users | ✅ | [Google Sheets — 55 August 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
 | Exported Responses / Excel Evidence | ✅ | [Google Sheets — 55 August 2026 Responses](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
-| Analytics / Transaction Activity Proof | ✅ | [TX on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) · Analytics via `src/lib/analytics.js` (15 funnel events — Plausible dashboard is private/login-required) |
+| Analytics / Transaction Activity Proof | ✅ | [Plausible Dashboard](https://plausible.io/stellsr.netlify.app) · [TX on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) |
 | Updated README & Documentation | ✅ | [README.md](https://github.com/ashu19846b-tech/level55/blob/main/README.md) · [docs/](https://github.com/ashu19846b-tech/level55/tree/main/docs) |
 | User Feedback Iteration Summary | ✅ | See [Product Improvements](#-product-improvements-based-on-user-feedback) section below |
 | Smart Contract (Testnet) | ✅ | [CCVUAGXS...3LN6R](https://stellar.expert/explorer/testnet/contract/CCVUAGXSXDATPMZC5ZGH6G47LUM4BPZLJ2NU47BAQ5W74CMS2YX3LN6R) |
@@ -271,18 +273,22 @@ Full evidence: [docs/TRANSACTION_EVIDENCE.md](docs/TRANSACTION_EVIDENCE.md)
 
 ## 📈 Analytics & Active Usage Proof
 
-### Plausible Analytics (Configured & Active)
-```html
-<!-- index.html — fires on initial page load -->
-<script async defer data-domain="level6-2mgt.vercel.app"
-  src="https://plausible.io/js/plausible.js"></script>
-```
+### Plausible Analytics — Live Dashboard (stellsr.netlify.app)
+
+![Plausible Analytics — Active Usage Proof](public/screenshots/analytics.png)
+
+> **Domain**: `stellsr.netlify.app` · **Unique Visitors**: 1 · **Total Visits**: 1 · **Total Pageviews**: 8 · **Visit Duration**: 58s
+> This screenshot confirms real user activity tracked via Plausible Analytics.
+> 📊 **[View Live Plausible Dashboard →](https://plausible.io/stellsr.netlify.app)**
+> Note: The 50+ user proof is based on the [Google Form responses (55 users)](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) — separate from this analytics screenshot.
+
+### How Plausible Is Integrated
 
 Plausible is integrated in two layers:
 
-**1. Automatic page tracking** — `PlausiblePageTracker` component in `App.jsx` fires `plausible('pageview')` on every React Router navigation, covering all client-side route changes in the SPA.
+**1. Automatic page tracking** — Official snippet in `index.html` fires on every hard load. `PlausiblePageTracker` component in `App.jsx` fires `plausible('pageview')` on every React Router client-side navigation.
 
-**2. Custom event tracking** — `src/lib/analytics.js` calls `window.plausible(eventName, { props })` for the following events whenever they fire:
+**2. Custom event tracking** — `src/lib/analytics.js` calls `window.plausible(eventName, { props })` for:
 
 | Event | Where fired |
 |---|---|
@@ -293,8 +299,6 @@ Plausible is integrated in two layers:
 | `feature_used` | Booking step progress, booking created |
 | `feedback_modal_opened` | Feedback modal opened |
 | `feedback_submitted` | User submitted feedback |
-
-The Plausible dashboard (`plausible.io/level6-2mgt.vercel.app`) is private — only the account owner can view live stats. To share analytics proof, export a screenshot from your Plausible account and add it to `public/screenshots/`.
 
 Full telemetry docs: [docs/ANALYTICS.md](docs/ANALYTICS.md)
 
@@ -405,7 +409,7 @@ VITE_BASE44_FUNCTIONS_VERSION=v1
 | **User Feedback Sheet (Excel Evidence)** | [📊 Google Sheets — August 2026 — 50+ Users](https://docs.google.com/spreadsheets/d/1F-qHpKN8Q4heAb4rMFrWChx41nkmzmaq1wO-MegW_WY/edit?usp=sharing) |
 | **Pitch Deck** | [View GASCHAIN Pitch Deck](https://docs.google.com/presentation/d/1qi5hOvfdv-mS6zEfLl7txfDjKsUSDjZ2/edit?usp=sharing&ouid=112689875951804711106&rtpof=true&sd=true) |
 | **Demo Video** | [▶️ Level 5 Demo — YouTube](https://youtu.be/vDrNAhBMgWo?si=pFeANjpoSt9JKuab) |
-| **Analytics** | Custom telemetry via `src/lib/analytics.js` — 15 events tracked · Plausible configured on `level6-2mgt.vercel.app` (dashboard is private) |
+| **Analytics** | [Plausible Dashboard — stellsr.netlify.app](https://plausible.io/stellsr.netlify.app) |
 | **Transaction Proof** | [TX Hash on Stellar Expert](https://stellar.expert/explorer/testnet/tx/18b1da9eaa7e45ca49f9aae631feab162b64c228c82f7d767cc94f87b004dc6c) |
 | **Product X / Twitter** | [@StegoVaultWeb3](https://x.com/StegoVaultWeb3) |
 | **Submission Checklist** | [docs/LEVEL5_SUBMISSION_CHECKLIST.md](docs/LEVEL5_SUBMISSION_CHECKLIST.md) |
