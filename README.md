@@ -418,6 +418,9 @@ VITE_BASE44_FUNCTIONS_VERSION=v1
 ## Analytics
 <img width="1855" height="877" alt="Screenshot 2026-09-15 053245" src="https://github.com/user-attachments/assets/29b8c3b6-e899-4b08-a189-dab6f74a45b1" />
 
+<img width="1920" height="898" alt="image" src="https://github.com/user-attachments/assets/bf0c8540-1fc9-4bb7-8405-d861271558d9" />
+
+
 ## 📜 License
 
 MIT © 2026 GASCHAIN — ashu19846b-tech
